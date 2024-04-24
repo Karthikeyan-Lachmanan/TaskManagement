@@ -1,0 +1,103 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+
+.input-placeholder {    
+    height: 1.5rem;
+    margin: 1rem 1rem 0.3rem;    
+}
+
+.input-value {
+    height: 1.8rem;
+    margin: 0 0 1rem 0.3rem;
+    border-radius: 0.4rem;
+    font-family: "PT Serif";
+}
+
+.input-value:hover {
+    box-shadow: 1rem 0.1rem 1.5rem rgba(21, 21, 21, 0.2);
+}
+.submit {
+    height: 2rem;
+    border-radius: 0.8rem;
+    width: 10rem;
+    color: black;
+    font-weight: 700;
+}
+
+.submit:hover {    
+    color: black;
+    background-color: cadetblue;
+}
+
+.button-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0 1rem 0;
+    border-radius: 0.4rem
+}
+
+.error-message {
+    color: red;
+}
+
+.filter-container {
+    margin: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.task-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%; /* Adjust width as needed */
+    margin-top: 2rem;
+  }
+  
+  .task-table th,
+  .task-table td {
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ddd; /* Light gray border for cells */
+  }
+  
+  .task-table tr:nth-child(even) {
+    background-color: #f5f5f5; /* Very light gray background for even rows */
+  }
+  
+  .task-table th {
+    text-align: left; /* Align table headers to the left */
+    font-weight: bold; /* Make headers bolder */
+    background-color: #eee; /* Light gray background for headers */
+    border-bottom: 2px solid #ddd; /* Thicker bottom border for headers */
+    padding: 15px; /* Add more padding for headers */
+  }
+  
+  .task-table .action {
+    text-align: center;       
+    .complete {
+        font-family: "PT Serif";
+         margin-right: 1rem;
+         height: 2rem; 
+    }
+    .complete:hover {
+        background-color: greenyellow;
+       
+    }
+    .delete {
+        font-family: "PT Serif";
+        height: 2rem; 
+    }
+    .delete:hover {
+        background-color: red;        
+    }
+  }
+
+  .no-task {
+    text-align: center;
+    color: red;
+    font-weight: 500;
+    border-radius: 0.4rem;
+  }
