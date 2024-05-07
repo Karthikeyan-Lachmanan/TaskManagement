@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { v4 as uuid } from "uuid";
 import { TaskItemData } from "./models/TaskItemData";
 import { createTask } from "./statemanagement/Actions";
 import './Task.css'
@@ -7,7 +8,7 @@ export const CreateTask = () => {
   const dispatch = useDispatch();
 
   const [task, setTask] = useState<TaskItemData>({
-    id: Date.now().toString(),
+    id: uuid(),
     status: "started",
     title: "",
     description: "",
@@ -42,7 +43,7 @@ export const CreateTask = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       dispatch(createTask(task));
-      setTask({ ...task, title: "", description: "", dueDate: '' })
+      setTask({ ...task, id: uuid(), title: "", description: "", dueDate: '' })
     }
   }
 
